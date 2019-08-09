@@ -1,14 +1,15 @@
 require 'game'
 
 describe Game do
+  subject(:game) {described_class.new(player1,player2)}
+  let(:player1) {double(:player1)}
+  let(:player2) {double(:player2)}
 
-  let(:victim) {double(:victim)}
-  subject(:game) {described_class.new(victim,victim)}
 
   describe "#attack" do
-    it "substrat hit point from the victim" do
-      expect(victim).to receive(:get_hit)
-      subject.attack(victim)
+    it "substract hit point from the victim" do
+      expect(player1).to receive(:get_hit)
+      subject.attack(player1)
     end
   end
 
