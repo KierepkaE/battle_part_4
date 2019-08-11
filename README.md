@@ -1,5 +1,6 @@
 # battle_sinatra
 
 
-- to run it type
+- to run it type:
+
   `shotgun config.ru`
